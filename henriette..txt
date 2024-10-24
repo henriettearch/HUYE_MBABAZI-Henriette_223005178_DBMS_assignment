@@ -1,0 +1,191 @@
+mysql> create database ruhande;
+Query OK, 1 row affected (0.00 sec)
+mysql> use ruhande
+mysql> create table ngoma(ID int(16),FIRST_NAME char(10),LAST_NAME char(12),GENDER char(7),PROVINCE char(8),DISTRICT char(12),SECTOR char(20),CELL char(12),Email char(15),PHONE_NUMBER int(10));
+Database changed
+mysql> create table ngoma(ID int(16),FIRST_NAME char(10),LAST_NAME char(12),GENDER char(7),PROVINCE char(8),DISTRICT char(12),SECTOR char(20),CELL char(12),Email char(15),PHONE_NUMBER int(10));
+Query OK, 0 rows affected, 2 warnings (0.01 sec)
+
+mysql> insert into ngoma value('1200370146161038',"Henriette","MBABAZI","Female","Southern","Kamonyi","Gacurabwenge","Gihinga","mbabazih251@gmail.com",'0790182190');
+Query OK, 1 row affected, 2 warnings (0.00 sec)
+
+mysql> insert into ngoma value('1200370146161038',"Henriette","MBABAZI","Female","Southern","Kamonyi","Gacurabwenge","Gihinga","mbabazih251@gmail.com",'079182190');
+Query OK, 1 row affected, 2 warnings (0.00 sec)
+
+mysql> insert into ngoma value('1200370146161048',"Henriette","UWABABYEYI","Female","Southern","Kamonyi","Gacurabwenge","Gihira","mbabzih@gmail.com",'0791082190');
+Query OK, 1 row affected, 2 warnings (0.00 sec)
+
+mysql> insert into ngoma value('1200370146161048',"Henriette","UWABABYEYI","Female","Southern","Kamonyi","Gacurabwenge","Gihira","mbabzih@gmail.com",'0791082190');
+Query OK, 1 row affected, 2 warnings (0.00 sec)
+
+mysql> insert into ngoma value('1200480146161048',"Enock","MUVUNYI","male","Southern","Muhanga","gahinga","Giramata","mayiraih@gmail.com",'0791082790');
+Query OK, 1 row affected, 2 warnings (0.00 sec)
+
+mysql> insert into ngoma value('1200480146661048',"Eric","Mukunzi","male","Southern","Muhanga","Tumba","Gikundiro","mineh@gmail.com",'0791082780');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into ngoma value('1200270146661048',"Hirwa","Mukundwa","female","Southern","Muhanga","Rango","Gikundamvura","hirwa@gmail.com",'0791085780');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into ngoma value('1200270146761048',"Clenia","Mukundane","female","Southern","Muhanga","Rango","Gikundamvura","hirwa@gmail.com",'0791085780');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into ngoma value('1200270146761048',"Nadia","Umukunzi","female","Southern","Huye","Rango","Gihindamuyaga","hirwange@gmail.com",'0781085780');
+Query OK, 1 row affected, 3 warnings (0.00 sec)
+
+mysql> insert into ngoma value('1200270146761748',"Nadine","Umukundwa","female","Southern","Huye","Rango","Nyamiyaga","henry@gmail.com",'0789085780');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> select*from ngoma;
++------------+------------+------------+--------+----------+----------+--------------+--------------+-----------------+--------------+
+| ID         | FIRST_NAME | LAST_NAME  | GENDER | PROVINCE | DISTRICT | SECTOR       | CELL         | Email           | PHONE_NUMBER |
++------------+------------+------------+--------+----------+----------+--------------+--------------+-----------------+--------------+
+| 2147483647 | Henriette  | MBABAZI    | Female | Southern | Kamonyi  | Gacurabwenge | Gihinga      | mbabazih251@gma |    790182190 |
+| 2147483647 | Henriette  | MBABAZI    | Female | Southern | Kamonyi  | Gacurabwenge | Gihinga      | mbabazih251@gma |     79182190 |
+| 2147483647 | Henriette  | UWABABYEYI | Female | Southern | Kamonyi  | Gacurabwenge | Gihira       | mbabzih@gmail.c |    791082190 |
+| 2147483647 | Henriette  | UWABABYEYI | Female | Southern | Kamonyi  | Gacurabwenge | Gihira       | mbabzih@gmail.c |    791082190 |
+| 2147483647 | Enock      | MUVUNYI    | male   | Southern | Muhanga  | gahinga      | Giramata     | mayiraih@gmail. |    791082790 |
+| 2147483647 | Eric       | Mukunzi    | male   | Southern | Muhanga  | Tumba        | Gikundiro    | mineh@gmail.com |    791082780 |
+| 2147483647 | Hirwa      | Mukundwa   | female | Southern | Muhanga  | Rango        | Gikundamvura | hirwa@gmail.com |    791085780 |
+| 2147483647 | Clenia     | Mukundane  | female | Southern | Muhanga  | Rango        | Gikundamvura | hirwa@gmail.com |    791085780 |
+| 2147483647 | Nadia      | Umukunzi   | female | Southern | Huye     | Rango        | Gihindamuyag | hirwange@gmail. |    781085780 |
+| 2147483647 | Nadine     | Umukundwa  | female | Southern | Huye     | Rango        | Nyamiyaga    | henry@gmail.com |    789085780 |
++------------+------------+------------+--------+----------+----------+--------------+--------------+-----------------+--------------+
+10 rows in set (0.00 sec)
+
+mysql> alter table ngoma add column age int(3);
+Query OK, 10 rows affected, 1 warning (0.02 sec)
+Records: 10  Duplicates: 0  Warnings: 1
+
+mysql> select*from ngoma;
++------------+------------+------------+--------+----------+----------+--------------+--------------+-----------------+--------------+------+
+| ID         | FIRST_NAME | LAST_NAME  | GENDER | PROVINCE | DISTRICT | SECTOR       | CELL         | Email           | PHONE_NUMBER | age  |
++------------+------------+------------+--------+----------+----------+--------------+--------------+-----------------+--------------+------+
+| 2147483647 | Henriette  | MBABAZI    | Female | Southern | Kamonyi  | Gacurabwenge | Gihinga      | mbabazih251@gma |    790182190 | NULL |
+| 2147483647 | Henriette  | MBABAZI    | Female | Southern | Kamonyi  | Gacurabwenge | Gihinga      | mbabazih251@gma |     79182190 | NULL |
+| 2147483647 | Henriette  | UWABABYEYI | Female | Southern | Kamonyi  | Gacurabwenge | Gihira       | mbabzih@gmail.c |    791082190 | NULL |
+| 2147483647 | Henriette  | UWABABYEYI | Female | Southern | Kamonyi  | Gacurabwenge | Gihira       | mbabzih@gmail.c |    791082190 | NULL |
+| 2147483647 | Enock      | MUVUNYI    | male   | Southern | Muhanga  | gahinga      | Giramata     | mayiraih@gmail. |    791082790 | NULL |
+| 2147483647 | Eric       | Mukunzi    | male   | Southern | Muhanga  | Tumba        | Gikundiro    | mineh@gmail.com |    791082780 | NULL |
+| 2147483647 | Hirwa      | Mukundwa   | female | Southern | Muhanga  | Rango        | Gikundamvura | hirwa@gmail.com |    791085780 | NULL |
+| 2147483647 | Clenia     | Mukundane  | female | Southern | Muhanga  | Rango        | Gikundamvura | hirwa@gmail.com |    791085780 | NULL |
+| 2147483647 | Nadia      | Umukunzi   | female | Southern | Huye     | Rango        | Gihindamuyag | hirwange@gmail. |    781085780 | NULL |
+| 2147483647 | Nadine     | Umukundwa  | female | Southern | Huye     | Rango        | Nyamiyaga    | henry@gmail.com |    789085780 | NULL |
++------------+------------+------------+--------+----------+----------+--------------+--------------+-----------------+--------------+------+
+10 rows in set (0.00 sec)
+
+mysql> update ngoma set age=18 where LAST_NAME="MBABAZI";
+Query OK, 2 rows affected (0.00 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> update ngoma set age=23 where cell="gihira";
+Query OK, 2 rows affected (0.00 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> update ngoma set age=25 where sector="Rango";
+Query OK, 4 rows affected (0.00 sec)
+Rows matched: 4  Changed: 4  Warnings: 0
+
+mysql> select*from ngoma;
++------------+------------+------------+--------+----------+----------+--------------+--------------+-----------------+--------------+------+
+| ID         | FIRST_NAME | LAST_NAME  | GENDER | PROVINCE | DISTRICT | SECTOR       | CELL         | Email           | PHONE_NUMBER | age  |
++------------+------------+------------+--------+----------+----------+--------------+--------------+-----------------+--------------+------+
+| 2147483647 | Henriette  | MBABAZI    | Female | Southern | Kamonyi  | Gacurabwenge | Gihinga      | mbabazih251@gma |    790182190 |   18 |
+| 2147483647 | Henriette  | MBABAZI    | Female | Southern | Kamonyi  | Gacurabwenge | Gihinga      | mbabazih251@gma |     79182190 |   18 |
+| 2147483647 | Henriette  | UWABABYEYI | Female | Southern | Kamonyi  | Gacurabwenge | Gihira       | mbabzih@gmail.c |    791082190 |   23 |
+| 2147483647 | Henriette  | UWABABYEYI | Female | Southern | Kamonyi  | Gacurabwenge | Gihira       | mbabzih@gmail.c |    791082190 |   23 |
+| 2147483647 | Enock      | MUVUNYI    | male   | Southern | Muhanga  | gahinga      | Giramata     | mayiraih@gmail. |    791082790 | NULL |
+| 2147483647 | Eric       | Mukunzi    | male   | Southern | Muhanga  | Tumba        | Gikundiro    | mineh@gmail.com |    791082780 | NULL |
+| 2147483647 | Hirwa      | Mukundwa   | female | Southern | Muhanga  | Rango        | Gikundamvura | hirwa@gmail.com |    791085780 |   25 |
+| 2147483647 | Clenia     | Mukundane  | female | Southern | Muhanga  | Rango        | Gikundamvura | hirwa@gmail.com |    791085780 |   25 |
+| 2147483647 | Nadia      | Umukunzi   | female | Southern | Huye     | Rango        | Gihindamuyag | hirwange@gmail. |    781085780 |   25 |
+| 2147483647 | Nadine     | Umukundwa  | female | Southern | Huye     | Rango        | Nyamiyaga    | henry@gmail.com |    789085780 |   25 |
++------------+------------+------------+--------+----------+----------+--------------+--------------+-----------------+--------------+------+
+10 rows in set (0.00 sec)
+
+mysql> update ngoma set age=17 where sector="gahinga";
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update ngoma set age=17 where sector="tumba";
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select*from ngoma;
++------------+------------+------------+--------+----------+----------+--------------+--------------+-----------------+--------------+------+
+| ID         | FIRST_NAME | LAST_NAME  | GENDER | PROVINCE | DISTRICT | SECTOR       | CELL         | Email           | PHONE_NUMBER | age  |
++------------+------------+------------+--------+----------+----------+--------------+--------------+-----------------+--------------+------+
+| 2147483647 | Henriette  | MBABAZI    | Female | Southern | Kamonyi  | Gacurabwenge | Gihinga      | mbabazih251@gma |    790182190 |   18 |
+| 2147483647 | Henriette  | MBABAZI    | Female | Southern | Kamonyi  | Gacurabwenge | Gihinga      | mbabazih251@gma |     79182190 |   18 |
+| 2147483647 | Henriette  | UWABABYEYI | Female | Southern | Kamonyi  | Gacurabwenge | Gihira       | mbabzih@gmail.c |    791082190 |   23 |
+| 2147483647 | Henriette  | UWABABYEYI | Female | Southern | Kamonyi  | Gacurabwenge | Gihira       | mbabzih@gmail.c |    791082190 |   23 |
+| 2147483647 | Enock      | MUVUNYI    | male   | Southern | Muhanga  | gahinga      | Giramata     | mayiraih@gmail. |    791082790 |   17 |
+| 2147483647 | Eric       | Mukunzi    | male   | Southern | Muhanga  | Tumba        | Gikundiro    | mineh@gmail.com |    791082780 |   17 |
+| 2147483647 | Hirwa      | Mukundwa   | female | Southern | Muhanga  | Rango        | Gikundamvura | hirwa@gmail.com |    791085780 |   25 |
+| 2147483647 | Clenia     | Mukundane  | female | Southern | Muhanga  | Rango        | Gikundamvura | hirwa@gmail.com |    791085780 |   25 |
+| 2147483647 | Nadia      | Umukunzi   | female | Southern | Huye     | Rango        | Gihindamuyag | hirwange@gmail. |    781085780 |   25 |
+| 2147483647 | Nadine     | Umukundwa  | female | Southern | Huye     | Rango        | Nyamiyaga    | henry@gmail.com |    789085780 |   25 |
++------------+------------+------------+--------+----------+----------+--------------+--------------+-----------------+--------------+------+
+10 rows in set (0.00 sec)
+
+mysql> alter table ngoma drop column gender;
+Query OK, 10 rows affected (0.02 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> select*from ngoma;
++------------+------------+------------+----------+----------+--------------+--------------+-----------------+--------------+------+
+| ID         | FIRST_NAME | LAST_NAME  | PROVINCE | DISTRICT | SECTOR       | CELL         | Email           | PHONE_NUMBER | age  |
++------------+------------+------------+----------+----------+--------------+--------------+-----------------+--------------+------+
+| 2147483647 | Henriette  | MBABAZI    | Southern | Kamonyi  | Gacurabwenge | Gihinga      | mbabazih251@gma |    790182190 |   18 |
+| 2147483647 | Henriette  | MBABAZI    | Southern | Kamonyi  | Gacurabwenge | Gihinga      | mbabazih251@gma |     79182190 |   18 |
+| 2147483647 | Henriette  | UWABABYEYI | Southern | Kamonyi  | Gacurabwenge | Gihira       | mbabzih@gmail.c |    791082190 |   23 |
+| 2147483647 | Henriette  | UWABABYEYI | Southern | Kamonyi  | Gacurabwenge | Gihira       | mbabzih@gmail.c |    791082190 |   23 |
+| 2147483647 | Enock      | MUVUNYI    | Southern | Muhanga  | gahinga      | Giramata     | mayiraih@gmail. |    791082790 |   17 |
+| 2147483647 | Eric       | Mukunzi    | Southern | Muhanga  | Tumba        | Gikundiro    | mineh@gmail.com |    791082780 |   17 |
+| 2147483647 | Hirwa      | Mukundwa   | Southern | Muhanga  | Rango        | Gikundamvura | hirwa@gmail.com |    791085780 |   25 |
+| 2147483647 | Clenia     | Mukundane  | Southern | Muhanga  | Rango        | Gikundamvura | hirwa@gmail.com |    791085780 |   25 |
+| 2147483647 | Nadia      | Umukunzi   | Southern | Huye     | Rango        | Gihindamuyag | hirwange@gmail. |    781085780 |   25 |
+| 2147483647 | Nadine     | Umukundwa  | Southern | Huye     | Rango        | Nyamiyaga    | henry@gmail.com |    789085780 |   25 |
++------------+------------+------------+----------+----------+--------------+--------------+-----------------+--------------+------+
+10 rows in set (0.00 sec)
+
+mysql> select ID,FIRST_NAME,PHONE_NUMBER from ngoma;
++------------+------------+--------------+
+| ID         | FIRST_NAME | PHONE_NUMBER |
++------------+------------+--------------+
+| 2147483647 | Henriette  |    790182190 |
+| 2147483647 | Henriette  |     79182190 |
+| 2147483647 | Henriette  |    791082190 |
+| 2147483647 | Henriette  |    791082190 |
+| 2147483647 | Enock      |    791082790 |
+| 2147483647 | Eric       |    791082780 |
+| 2147483647 | Hirwa      |    791085780 |
+| 2147483647 | Clenia     |    791085780 |
+| 2147483647 | Nadia      |    781085780 |
+| 2147483647 | Nadine     |    789085780 |
++------------+------------+--------------+
+10 rows in set (0.00 sec)
+mysql> select *from ngoma where age='25' AND province="southern";
++------------+------------+-----------+----------+----------+--------+--------------+-----------------+--------------+------+
+| ID         | FIRST_NAME | LAST_NAME | PROVINCE | DISTRICT | SECTOR | CELL         | Email           | PHONE_NUMBER | age  |
++------------+------------+-----------+----------+----------+--------+--------------+-----------------+--------------+------+
+| 2147483647 | Hirwa      | Mukundwa  | Southern | Muhanga  | Rango  | Gikundamvura | hirwa@gmail.com |    791085780 |   25 |
+| 2147483647 | Clenia     | Mukundane | Southern | Muhanga  | Rango  | Gikundamvura | hirwa@gmail.com |    791085780 |   25 |
+| 2147483647 | Nadia      | Umukunzi  | Southern | Huye     | Rango  | Gihindamuyag | hirwange@gmail. |    781085780 |   25 |
+| 2147483647 | Nadine     | Umukundwa | Southern | Huye     | Rango  | Nyamiyaga    | henry@gmail.com |    789085780 |   25 |
++------------+------------+-----------+----------+----------+--------+--------------+-----------------+--------------+------+
+4 rows in set (0.00 sec)
+mysql> select*from ngoma where age='25' OR sector="gacurabwenge";
++------------+------------+------------+----------+----------+--------------+--------------+-----------------+--------------+------+
+| ID         | FIRST_NAME | LAST_NAME  | PROVINCE | DISTRICT | SECTOR       | CELL         | Email           | PHONE_NUMBER | age  |
++------------+------------+------------+----------+----------+--------------+--------------+-----------------+--------------+------+
+| 2147483647 | Henriette  | MBABAZI    | Southern | Kamonyi  | Gacurabwenge | Gihinga      | mbabazih251@gma |    790182190 |   18 |
+| 2147483647 | Henriette  | MBABAZI    | Southern | Kamonyi  | Gacurabwenge | Gihinga      | mbabazih251@gma |     79182190 |   18 |
+| 2147483647 | Henriette  | UWABABYEYI | Southern | Kamonyi  | Gacurabwenge | Gihira       | mbabzih@gmail.c |    791082190 |   23 |
+| 2147483647 | Henriette  | UWABABYEYI | Southern | Kamonyi  | Gacurabwenge | Gihira       | mbabzih@gmail.c |    791082190 |   23 |
+| 2147483647 | Hirwa      | Mukundwa   | Southern | Muhanga  | Rango        | Gikundamvura | hirwa@gmail.com |    791085780 |   25 |
+| 2147483647 | Clenia     | Mukundane  | Southern | Muhanga  | Rango        | Gikundamvura | hirwa@gmail.com |    791085780 |   25 |
+| 2147483647 | Nadia      | Umukunzi   | Southern | Huye     | Rango        | Gihindamuyag | hirwange@gmail. |    781085780 |   25 |
+| 2147483647 | Nadine     | Umukundwa  | Southern | Huye     | Rango        | Nyamiyaga    | henry@gmail.com |    789085780 |   25 |
++------------+------------+------------+----------+----------+--------------+--------------+-----------------+--------------+------+
+8 rows in set (0.00 sec)
